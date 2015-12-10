@@ -122,6 +122,7 @@ __ここからはMacを基準に説明していきます。__
 4. 以下を実行
 
 ```bash
+mkdir /Applications/XAMPP/xamppfiles/htdocs/tel_practice_web-master/app/tmp
 chmod -R a+w /Applications/XAMPP/xamppfiles/htdocs/tel_practice_web-master/app/tmp
 ```
 
@@ -295,7 +296,15 @@ class Phrase extends AppModel {
 __TweetsController.php__
 
 ```php
-public function index()
+    public $helpers = ['Form'];
+    public $uses = ['Phrase']; // Phraseを追加
+    private $twitter;
+
+    public function beforeFilter(){
+        //省略
+    }
+    
+    public function index()
     {
         var_dump($phrases);
         $tl = $this->twitter->get('statuses/home_timeline', ['count' => 200]);
@@ -324,7 +333,6 @@ public function index()
 __index.ctp__
 
 ```php
-<?php
 <h4>定型文</h4>
 <?php foreach ($phrases as $phrase) : ?>
 <?php
