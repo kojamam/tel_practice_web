@@ -306,7 +306,6 @@ __TweetsController.php__
     
     public function index()
     {
-        var_dump($phrases);
         $tl = $this->twitter->get('statuses/home_timeline', ['count' => 200]);
         $this->set("tl", $tl);
 
@@ -337,8 +336,8 @@ __index.ctp__
 <?php foreach ($phrases as $phrase) : ?>
 <?php
 	echo $this->Form->create(null,['url' => ['controller' =>'Tweets', 'action' => 'postTweet']]);
-	echo $this->Form->hidden('content', ['name' => 'data[tweet]', 'value' => $phrase['Phrase']['content']]);
-	echo $this->Form->end($phrase['Phrase']['content']);
+	echo $this->Form->hidden('content', ['name' => 'data[tweet]', 'value' => $phrase['Phrase']['phrase']]);
+	echo $this->Form->end($phrase['Phrase']['phrase']);
 ?>
 <?php endforeach; ?>
 
