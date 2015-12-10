@@ -344,7 +344,7 @@ __index.ctp__
 <h4>定型文を追加</h4>
 <?php
 	echo $this->Form->create('Phrase',['url' => ['controller' => 'Tweets', 'action' => 'addPhrase']]);
-	echo $this->Form->input('content');
+	echo $this->Form->input('phrase');
 	echo $this->Form->end('定型文を追加');
 ?>
 
