@@ -70,9 +70,9 @@ __ここからはMacを基準に説明していきます。__
 
 ###CakePHPが動くようにする
 ####必要なソフトの起動
-1. manager-osx.app開く。  
+1. manager-osx.app開く。(WinはXampp Controll Panel)  
 <img src="img/manager-osx.png" width="250">
-2. Manage Serversを開き、以下順でクリックする。   
+2. Manage Serversを開き、以下順でクリックする。  (WinはApacheとMySQLのStartボタンを押す) 
 ![](img/xampp1.png)
 
 ####データベースを作成
@@ -328,7 +328,7 @@ __index.ctp__
 <h4>定型文</h4>
 <?php foreach ($phrases as $phrase) : ?>
 <?php
-	echo $this->Form->create(null,['url' => ['action' => 'postTweet']]);
+	echo $this->Form->create(null,['url' => ['controller' =>'Tweets', 'action' => 'postTweet']]);
 	echo $this->Form->hidden('content', ['name' => 'data[tweet]', 'value' => $phrase['Phrase']['content']]);
 	echo $this->Form->end($phrase['Phrase']['content']);
 ?>
