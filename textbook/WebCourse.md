@@ -85,7 +85,7 @@ __ここからはMacを基準に説明していきます。__
 1. Atom.appを開く  
 <img src="img/atom.png" width="250">
 
-2. [ファイル]→[開く]から```/Applications/XAMPP/xamppfiles/htdocs/cakephp```を開き、サイドバーから```app/config/database.php```を以下のように変更する。  
+2. [ファイル]→[開く]から```/Applications/XAMPP/xamppfiles/htdocs/tel_practice_web-master```を開き、サイドバーから```app/config/database.php```を以下のように変更する。  
 
 ここを 
 
@@ -122,11 +122,11 @@ __ここからはMacを基準に説明していきます。__
 4. 以下を実行
 
 ```bash
-chmod -R a+w /Applications/XAMPP/xamppfiles/htdocs/cakephp/app/tmp
+chmod -R a+w /Applications/XAMPP/xamppfiles/htdocs/tel_practice_web-master/app/tmp
 ```
 
 ####準備完了
-[http://127.0.0.1/cakephp](http://127.0.0.1/cakephp)にアクセスしてこのようになれば準備OK
+[http://127.0.0.1/cakephp](http://127.0.0.1/tel_practice_web-master)にアクセスしてこのようになれば準備OK
 
 ![](img/cake1.png)
 	
@@ -209,7 +209,7 @@ __index.ctp__
 </ul>
 ```
 
-[http://127.0.0.1/cakephp/tweets/](http://127.0.0.1/cakephp/tweets/)にアクセスして自分のタイムラインが表示されていたらOK。
+[http://127.0.0.1/cakephp/tweets/](http://127.0.0.1/tel_practice_web-master/tweets/)にアクセスして自分のタイムラインが表示されていたらOK。
 
 
 ###ツイートを投稿する
