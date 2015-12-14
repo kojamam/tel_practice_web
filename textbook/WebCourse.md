@@ -129,7 +129,7 @@ chmod -R a+w /Applications/XAMPP/xamppfiles/htdocs/tel_practice_web-master/app/t
 ####準備完了
 [http://127.0.0.1/tel_practice_web-master](http://127.0.0.1/tel_practice_web-master)にアクセスしてこのようになれば準備OK
 
-![](img/cake1.png)
+![](img/Cake1.png)
 	
 ##4. タイムラインをつくる
 以下で困ったときは[公式ドキュメント](http://book.cakephp.org/2.0/ja/)を見ると良いです。
