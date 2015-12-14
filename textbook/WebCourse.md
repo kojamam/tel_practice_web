@@ -127,7 +127,7 @@ chmod -R a+w /Applications/XAMPP/xamppfiles/htdocs/tel_practice_web-master/app/t
 ```
 
 ####準備完了
-[http://127.0.0.1/cakephp](http://127.0.0.1/tel_practice_web-master)にアクセスしてこのようになれば準備OK
+[http://127.0.0.1/tel_practice_web-master](http://127.0.0.1/tel_practice_web-master)にアクセスしてこのようになれば準備OK
 
 ![](img/cake1.png)
 	
@@ -210,7 +210,7 @@ __index.ctp__
 </ul>
 ```
 
-[http://127.0.0.1/cakephp/tweets/](http://127.0.0.1/tel_practice_web-master/tweets/)にアクセスして自分のタイムラインが表示されていたらOK。
+[http://127.0.0.1/tel_practice_web-master/tweets/](http://127.0.0.1/tel_practice_web-master/tweets/)にアクセスして自分のタイムラインが表示されていたらOK。
 
 
 ###ツイートを投稿する
@@ -264,7 +264,7 @@ __index.ctp__
 ```sql
 CREATE TABLE phrases (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    phrase VARCHAR(50),
+    content VARCHAR(50),
     created DATETIME DEFAULT NULL,
     modified DATETIME DEFAULT NULL
 );
@@ -336,15 +336,15 @@ __index.ctp__
 <?php foreach ($phrases as $phrase) : ?>
 <?php
 	echo $this->Form->create(null,['url' => ['controller' =>'Tweets', 'action' => 'postTweet']]);
-	echo $this->Form->hidden('content', ['name' => 'data[tweet]', 'value' => $phrase['Phrase']['phrase']]);
-	echo $this->Form->end($phrase['Phrase']['phrase']);
+	echo $this->Form->hidden('content', ['name' => 'data[tweet]', 'value' => $phrase['Phrase']['content']]);
+	echo $this->Form->end($phrase['Phrase']['content']);
 ?>
 <?php endforeach; ?>
 
 <h4>定型文を追加</h4>
 <?php
 	echo $this->Form->create('Phrase',['url' => ['controller' => 'Tweets', 'action' => 'addPhrase']]);
-	echo $this->Form->input('phrase');
+	echo $this->Form->input('content');
 	echo $this->Form->end('定型文を追加');
 ?>
 
